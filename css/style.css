@@ -15,7 +15,7 @@ h3 {
 
 #section-1 {
     height: 1208.69px;
-    background-image: url(/images/map.jpeg);
+    background-image: url(../images/map.jpeg);
     background-size: cover;
     background-position: center;
     padding: 100px 0;
