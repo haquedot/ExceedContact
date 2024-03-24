@@ -27,6 +27,42 @@ h3 {
     border-radius: 12px;
     color: #fff;
     backdrop-filter: blur(10px);
+    border: 1px solid;
+    border-image-source: linear-gradient(134.36deg, #FFFFFF -1.4%, #555555 45.16%, #FFFFFF 87.1%);
+}
+
+.triangle-right {
+    position: absolute;
+    top: 10%;
+    right: -16px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 16px solid #FFFFFF66;
+}
+
+.triangle-top {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #FFFFFF66;
+}
+
+.triangle-bottom {
+    position: absolute;
+    bottom: -16px;
+    left: 56px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-top: 16px solid #FFFFFF66;
+    border-right: 16px solid transparent;
 }
 
 
@@ -63,9 +99,9 @@ h3 {
     transition: max-height 0.5s ease;
 }
 
-.custom-card:hover .card-content {
+/* .custom-card:hover .card-content {
     max-height: 500px;
-}
+} */
 
 .card-content p {
     font-size: 16px;
@@ -85,6 +121,11 @@ h3 {
     color: #fff;
 }
 
+.card-content.show {
+    max-height: 500px;
+    /* Set the max-height to your desired value */
+}
+
 .card-btn {
     background-color: #F18234;
     color: #fff;
@@ -96,25 +137,39 @@ h3 {
 
 .card-1 {
     max-width: 433.52px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    left: 40%;
+    position: absolute;
+    z-index: 4;
 }
 
 .card-2 {
     max-width: 433.52px;
     margin-top: 80px;
     margin-left: 150px;
+    right: 10%;
+    top: 40%;
+    position: absolute;
+    z-index: 3;
 }
 
 .card-3 {
     max-width: 433.52px;
     margin-top: 150px;
-
+    left: 10%;
+    top: 60%;
+    position: absolute;
+    z-index: 2;
 }
 
 .card-4 {
     max-width: 433.52px;
     margin-top: 120px;
     margin-left: 90px;
+    right: 10%;
+    top: 75%;
+    position: absolute;
+    z-index: 1;
 }
 
 
@@ -207,6 +262,11 @@ h3 {
     .card-4 {
         width: 100%;
         margin: 0;
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
     }
 
 }
